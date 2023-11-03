@@ -11,7 +11,7 @@
 class ECSource {
   public static <T> T getNodeValue(Node<T> head, int index) {
     // todo - note the return type, but don't overthink it
-    if(index < 0)return null;
+    if(head.next == null)return null;
     if(index == 0) return head.val;
     return getNodeValue(head.next,index -1);
   }
@@ -27,5 +27,6 @@ class ECSource {
     // banana -> mango -> kiwi
 
     System.out.println(ECSource.getNodeValue(node1, 1));
+    System.out.println(ECSource.getNodeValue(node1,7));
   }
 }
